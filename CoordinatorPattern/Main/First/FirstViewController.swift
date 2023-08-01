@@ -17,9 +17,9 @@ class FirstViewController: UIViewController {
         return label
     }()
 
-    lazy var detailButton: UIButton = {
+    lazy var loginButton: UIButton = {
        let button = UIButton()
-        button.setTitle("Go to Details", for: .normal)
+        button.setTitle("Login", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         button.addTarget(self, action: #selector(onButtonPress), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +27,7 @@ class FirstViewController: UIViewController {
     }()
 
     var viewModel: FirstTabViewModel!
-    var showDetailRequested: () -> () = {}
+    var loginViewRequested: () -> () = {}
     var subscriptions = Set<AnyCancellable>()
 
     override func viewDidLoad() {
@@ -47,14 +47,14 @@ class FirstViewController: UIViewController {
 
     private func addViews() {
         view.addSubview(infoLabel)
-        view.addSubview(detailButton)
+        view.addSubview(loginButton)
         setupLayoutForInfoLabel()
-        setupLayoutForDetailButton()
+        setupLayoutForLoginButton()
     }
 
     @objc
     private func onButtonPress() {
-        showDetailRequested()
+        loginViewRequested()
     }
 
     private func setupLayoutForInfoLabel() {
@@ -67,12 +67,12 @@ class FirstViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
     }
 
-    private func setupLayoutForDetailButton() {
+    private func setupLayoutForLoginButton() {
         let constraints = [
-            detailButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 100),
-            detailButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            detailButton.widthAnchor.constraint(equalToConstant: 200),
-            detailButton.heightAnchor.constraint(equalToConstant: 60),
+            loginButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 100),
+            loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginButton.widthAnchor.constraint(equalToConstant: 200),
+            loginButton.heightAnchor.constraint(equalToConstant: 60),
         ]
         NSLayoutConstraint.activate(constraints)
     }

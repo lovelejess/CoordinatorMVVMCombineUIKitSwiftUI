@@ -22,8 +22,8 @@ class FirstTabCoordinator: Coordinatable {
     lazy var firstViewController: FirstViewController = {
         let vc = FirstViewController()
         vc.viewModel = viewModel
-        vc.showDetailRequested = { [weak self] in
-            self?.goToDetail()
+        vc.loginViewRequested = { [weak self] in
+            self?.goToLoginView()
         }
 
         vc.title = "First"
@@ -34,8 +34,8 @@ class FirstTabCoordinator: Coordinatable {
         rootViewController.setViewControllers([firstViewController], animated: false)
     }
 
-    private func goToDetail() {
-        let detailViewController = UIHostingController(rootView: FirstDetailView(viewModel: viewModel))
-        rootViewController.pushViewController(detailViewController, animated: true)
+    private func goToLoginView() {
+        let loginViewController = UIHostingController(rootView: FirstDetailView(viewModel: viewModel))
+        rootViewController.pushViewController(loginViewController, animated: true)
     }
 }
