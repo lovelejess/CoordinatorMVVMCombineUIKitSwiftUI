@@ -18,6 +18,9 @@
 		168114962A7987E00068B482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168114952A7987E00068B482 /* ContentView.swift */; };
 		168114992A7989380068B482 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168114982A7989380068B482 /* Coordinatable.swift */; };
 		1681149B2A7989460068B482 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681149A2A7989460068B482 /* ApplicationCoordinator.swift */; };
+		1681149F2A798B110068B482 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681149E2A798B110068B482 /* OnboardingCoordinator.swift */; };
+		168114A12A798B560068B482 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168114A02A798B560068B482 /* OnboardingView.swift */; };
+		168114A42A7990420068B482 /* ScaledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168114A32A7990420068B482 /* ScaledImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		168114952A7987E00068B482 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		168114982A7989380068B482 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		1681149A2A7989460068B482 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		1681149E2A798B110068B482 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		168114A02A798B560068B482 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		168114A32A7990420068B482 /* ScaledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				1681145F2A7980F10068B482 /* CoordinatorPattern */,
+				168114A22A7990330068B482 /* ViewHelpers */,
 				168114762A7980F30068B482 /* CoordinatorPatternTests */,
 				168114802A7980F30068B482 /* CoordinatorPatternUITests */,
 				1681145E2A7980F10068B482 /* Products */,
@@ -103,11 +110,12 @@
 		1681145F2A7980F10068B482 /* CoordinatorPattern */ = {
 			isa = PBXGroup;
 			children = (
-				168114972A79892D0068B482 /* Coordinator */,
 				168114602A7980F10068B482 /* AppDelegate.swift */,
 				168114622A7980F10068B482 /* SceneDelegate.swift */,
 				168114952A7987E00068B482 /* ContentView.swift */,
 				168114642A7980F10068B482 /* ViewController.swift */,
+				168114972A79892D0068B482 /* Coordinator */,
+				1681149C2A798AEC0068B482 /* Onboarding */,
 				168114692A7980F30068B482 /* Assets.xcassets */,
 				1681146B2A7980F30068B482 /* LaunchScreen.storyboard */,
 				1681146E2A7980F30068B482 /* Info.plist */,
@@ -139,6 +147,23 @@
 				1681149A2A7989460068B482 /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1681149C2A798AEC0068B482 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1681149E2A798B110068B482 /* OnboardingCoordinator.swift */,
+				168114A02A798B560068B482 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		168114A22A7990330068B482 /* ViewHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				168114A32A7990420068B482 /* ScaledImageView.swift */,
+			);
+			path = ViewHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +299,10 @@
 				168114652A7980F10068B482 /* ViewController.swift in Sources */,
 				168114962A7987E00068B482 /* ContentView.swift in Sources */,
 				168114992A7989380068B482 /* Coordinatable.swift in Sources */,
+				1681149F2A798B110068B482 /* OnboardingCoordinator.swift in Sources */,
 				168114612A7980F10068B482 /* AppDelegate.swift in Sources */,
+				168114A42A7990420068B482 /* ScaledImageView.swift in Sources */,
+				168114A12A798B560068B482 /* OnboardingView.swift in Sources */,
 				168114632A7980F10068B482 /* SceneDelegate.swift in Sources */,
 				1681149B2A7989460068B482 /* ApplicationCoordinator.swift in Sources */,
 			);
