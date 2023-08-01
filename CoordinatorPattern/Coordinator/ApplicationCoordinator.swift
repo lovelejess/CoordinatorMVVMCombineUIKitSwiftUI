@@ -23,7 +23,10 @@ class ApplicationCoordinator: Coordinatable {
     }
 
     func start() {
-        hasSeenOnBoarding.sink { [weak self] hasSeen in
+        setupOnboardingValue()
+        hasSeenOnBoarding
+            .removeDuplicates()
+            .sink { [weak self] hasSeen in
             guard let self = self else { return }
             if hasSeen {
                 let mainCoordinator = MainCoordinator()
@@ -37,5 +40,17 @@ class ApplicationCoordinator: Coordinatable {
                 self.window.rootViewController = onboardingCoordinator.rootViewController
             }
         }.store(in: &subscriptions)
+    }
+
+    func setupOnboardingValue() {
+        let key = "hasSeenOnboarding"
+        let value = UserDefaults.standard.bool(forKey: key)
+        hasSeenOnBoarding.send(value)
+
+        hasSeenOnBoarding
+            .filter({$0})
+            .sink { (value) in
+                UserDefaults.standard.setValue(value, forKey: key)
+            }.store(in: &subscriptions)
     }
 }
