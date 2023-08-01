@@ -19,9 +19,14 @@ class ApplicationCoordinator: Coordinatable {
     }
 
     func start() {
-        let onboardingCoordinator = OnboardingCoordinator()
-        onboardingCoordinator.start()
-        self.childCoordinators = [onboardingCoordinator]
-        window.rootViewController = onboardingCoordinator.rootViewController
+//        let onboardingCoordinator = OnboardingCoordinator()
+//        onboardingCoordinator.start()
+//        self.childCoordinators = [onboardingCoordinator]
+//        window.rootViewController = onboardingCoordinator.rootViewController
+
+        let mainCoordinator = MainCoordinator()
+        mainCoordinator.start()
+        childCoordinators = [mainCoordinator]
+        window.rootViewController = mainCoordinator.rootViewController
     }
 }
