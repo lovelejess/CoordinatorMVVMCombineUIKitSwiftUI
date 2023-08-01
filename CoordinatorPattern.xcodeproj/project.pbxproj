@@ -16,6 +16,8 @@
 		168114822A7980F30068B482 /* CoordinatorPatternUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168114812A7980F30068B482 /* CoordinatorPatternUITests.swift */; };
 		168114842A7980F30068B482 /* CoordinatorPatternUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168114832A7980F30068B482 /* CoordinatorPatternUITestsLaunchTests.swift */; };
 		168114962A7987E00068B482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168114952A7987E00068B482 /* ContentView.swift */; };
+		168114992A7989380068B482 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168114982A7989380068B482 /* Coordinatable.swift */; };
+		1681149B2A7989460068B482 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681149A2A7989460068B482 /* ApplicationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		168114812A7980F30068B482 /* CoordinatorPatternUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorPatternUITests.swift; sourceTree = "<group>"; };
 		168114832A7980F30068B482 /* CoordinatorPatternUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorPatternUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		168114952A7987E00068B482 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		168114982A7989380068B482 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		1681149A2A7989460068B482 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		1681145F2A7980F10068B482 /* CoordinatorPattern */ = {
 			isa = PBXGroup;
 			children = (
+				168114972A79892D0068B482 /* Coordinator */,
 				168114602A7980F10068B482 /* AppDelegate.swift */,
 				168114622A7980F10068B482 /* SceneDelegate.swift */,
 				168114952A7987E00068B482 /* ContentView.swift */,
@@ -125,6 +130,15 @@
 				168114832A7980F30068B482 /* CoordinatorPatternUITestsLaunchTests.swift */,
 			);
 			path = CoordinatorPatternUITests;
+			sourceTree = "<group>";
+		};
+		168114972A79892D0068B482 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				168114982A7989380068B482 /* Coordinatable.swift */,
+				1681149A2A7989460068B482 /* ApplicationCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +273,10 @@
 			files = (
 				168114652A7980F10068B482 /* ViewController.swift in Sources */,
 				168114962A7987E00068B482 /* ContentView.swift in Sources */,
+				168114992A7989380068B482 /* Coordinatable.swift in Sources */,
 				168114612A7980F10068B482 /* AppDelegate.swift in Sources */,
 				168114632A7980F10068B482 /* SceneDelegate.swift in Sources */,
+				1681149B2A7989460068B482 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
