@@ -26,6 +26,10 @@ class FirstTabCoordinator: Coordinatable {
             self?.goToLoginView()
         }
 
+        vc.loginSubmitted = { [weak self] hasSubmitted in
+            self?.rootViewController.popToRootViewController(animated: true)
+        }
+
         vc.title = "First"
         return vc
     }()

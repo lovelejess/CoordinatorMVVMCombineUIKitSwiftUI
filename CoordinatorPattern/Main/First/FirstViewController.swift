@@ -28,6 +28,7 @@ class FirstViewController: UIViewController {
 
     var viewModel: FirstTabViewModel!
     var loginViewRequested: () -> () = {}
+    var loginSubmitted: (Bool) -> () = {_ in}
     var subscriptions = Set<AnyCancellable>()
 
     override func viewDidLoad() {
@@ -43,6 +44,12 @@ class FirstViewController: UIViewController {
                     self.infoLabel.text = ""
                 }
             }.store(in: &subscriptions)
+
+        viewModel.$didSubmitLogin
+            .sink(receiveValue: { [weak self] didSubmitLogin in
+                self?.loginSubmitted(didSubmitLogin)
+
+            }).store(in: &subscriptions)
     }
 
     private func addViews() {

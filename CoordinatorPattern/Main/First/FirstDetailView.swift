@@ -18,7 +18,12 @@ struct FirstDetailView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             TextField("email", text: $viewModel.email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+            Button("Submit", action: submitLoginRequested)
         }
+    }
+
+    private func submitLoginRequested() {
+        viewModel.didSubmitLogin = true
     }
 }
 

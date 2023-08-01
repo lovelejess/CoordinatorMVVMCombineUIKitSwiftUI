@@ -11,4 +11,5 @@ class FirstTabViewModel: ObservableObject {
 
     @Published var name: String = ""
     @Published var email: String = ""
+    @Published var didSubmitLogin: Bool = false
 }
